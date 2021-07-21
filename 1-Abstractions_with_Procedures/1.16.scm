@@ -1,0 +1,5 @@
+(define (expt-iter base count acc)
+  (cond ((= count 0) acc)
+        ((even? count) (expt-iter (square base) (/ count 2) acc))
+        (else (expt-iter base (- count 1) (* acc base)))))
+(define (fast-expt base count) (expt-iter base count 1))

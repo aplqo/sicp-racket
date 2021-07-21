@@ -1,0 +1,7 @@
+(define (halve x) (/ x 2))
+(define (double x) (+ x x))
+(define (multiply-iter a b acc)
+  (cond ((= b 0) acc)
+        ((even? b) (multiply-iter (double a) (halve b) acc))
+        (else (multiply-iter a (- b 1) (+ acc a)))))
+(define (multiply a b) (multiply-iter a b 0))
