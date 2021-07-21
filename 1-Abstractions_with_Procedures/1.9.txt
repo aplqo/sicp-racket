@@ -1,0 +1,2 @@
+1. recursive process
+2. iterative process
