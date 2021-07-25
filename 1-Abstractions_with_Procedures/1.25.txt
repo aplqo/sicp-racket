@@ -1,0 +1,1 @@
+No, it takes more time to multiply large numbers.
