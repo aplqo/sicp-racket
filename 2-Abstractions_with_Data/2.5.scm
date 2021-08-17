@@ -1,0 +1,11 @@
+(define (log-base b v)
+  (define (log-iter v acc)
+    (if (= (remainder v b) 0)
+      (log-iter (/ v b) (+ acc 1))
+      acc))
+  (log-iter v 0))
+
+(define (cons a b)
+  (* (expt 2 a) (expt 3 b)))
+(define (car z) (log-base 2 z))
+(define (cdr z) (log-base 3 z))
