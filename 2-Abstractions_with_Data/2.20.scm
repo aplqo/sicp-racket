@@ -1,0 +1,10 @@
+(define (same-parity x . xs)
+  (define (same-as p l)
+    (if (null? l)
+      l
+      (let ((x (car l))
+            (tail (same-as p (cdr l))))
+        (if (boolean=? p (odd? x))
+          (cons x tail)
+          tail))))
+  (cons x (same-as (odd? x) xs)))

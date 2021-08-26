@@ -1,0 +1,2 @@
+1. Latter items are appended to front.
+2. Result isn't a list.
