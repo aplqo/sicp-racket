@@ -1,0 +1,6 @@
+(define (deep-reverse items)
+  (map (lambda (x) 
+         (if (pair? x)
+           (deep-reverse x)
+           x))
+       (reverse items)))

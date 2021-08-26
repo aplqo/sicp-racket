@@ -1,0 +1,6 @@
+(define (total-weight w)
+  (define (branch-weight b)
+    (let ((x (branch-structure b)))
+      (if (is-weight? x) x (total-weight x))))
+  (+ (branch-weight (left-branch w))
+     (branch-weight (right-branch w))))
